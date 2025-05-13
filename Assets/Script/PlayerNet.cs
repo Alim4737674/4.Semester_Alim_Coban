@@ -38,7 +38,7 @@ public class PlayerNet : NetworkBehaviour
     [ServerRpc]
     public void CreateObjectServerRPC()
     {
-        Gameobjekt obj = Instantiate(pillar);
+        GameObject obj = Instantiate(pillar);
         obj.GetComponent<NetworkObject>().Spawn();
     }
 
