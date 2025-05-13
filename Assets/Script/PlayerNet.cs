@@ -3,10 +3,13 @@ using Unity.Netcode;
 
 public class PlayerNet : NetworkBehaviour
 {
+
+    public GameObject pillar;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        
+
     }
 
     public NetworkVariable<int> score = new NetworkVariable<int>
@@ -20,11 +23,23 @@ public class PlayerNet : NetworkBehaviour
         float x = Input.GetAxis("Horizontal");
         float z = Input.GetAxis("Vertical");
         Vector3 movement = new Vector3(x, z, 0);
-        if (movement.magnitude > 0) 
+        if (movement.magnitude > 0)
         {
             MovingServerRPC(movement);
         }
         score.Value += 1;
+
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            CreateObjectServerRPC();
+        }
+    }
+
+    [ServerRpc]
+    public void CreateObjectServerRPC()
+    {
+        Gameobjekt obj = Instantiate(pillar);
+        obj.GetComponent<NetworkObject>().Spawn();
     }
 
     [ServerRpc]

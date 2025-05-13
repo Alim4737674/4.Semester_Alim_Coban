@@ -118,6 +118,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 113be45f508c82b448b9c3ca7174fc4a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ShowTopMostFoldoutHeaderGroup: 1
+  pillar: {fileID: 1905617626121518933, guid: e3b15b34f8c070c45bce568eaf845a0f, type: 3}
+  score:
+    m_InternalValue: 0
 --- !u!1 &4723355707193161040
 GameObject:
   m_ObjectHideFlags: 0
