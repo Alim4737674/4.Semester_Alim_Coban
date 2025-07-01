@@ -337,6 +337,10 @@ PrefabInstance:
       propertyPath: animator
       value: 
       objectReference: {fileID: 1993455273}
+    - target: {fileID: 1810772052714519836, guid: 7326fe2e38fca6847a599f249daa6b0d, type: 3}
+      propertyPath: spawnablePrefab
+      value: 
+      objectReference: {fileID: 1905617626121518933, guid: e3b15b34f8c070c45bce568eaf845a0f, type: 3}
     - target: {fileID: 4032559403780366596, guid: 7326fe2e38fca6847a599f249daa6b0d, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0

@@ -66,7 +66,7 @@ public class Player : NetworkBehaviour
 
     void Update()
     {
-        ipointTimer += Time.deltaTime;
+        pointTimer += Time.deltaTime;
         if (pointTimer >= 1f)
         {
             points += 1;
@@ -80,7 +80,7 @@ public class Player : NetworkBehaviour
 
             if (points >= costToSpawn)
             {
-                points -= costToSpawn; // ⬅️ WICHTIG: Erst Punkte abziehen
+                points -= costToSpawn;
                 Debug.Log("Objekt wird gespawnt. Neue Punkte: " + points);
                 SpawnServerRpc();
             }
